@@ -1,0 +1,13 @@
+﻿<Window x:Class="WorldSkills.Windows.CustomMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Окно уведомления" Height="300" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock x:Name="MessageTxt" TextAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 30" TextWrapping="Wrap" Style="{StaticResource TxbDefaultStyleHeader}"/>
+        </StackPanel>
+
+        <Button Content="ОК" FontSize="12" VerticalAlignment="Bottom" FontWeight="Bold" Margin="0 0 0 30" Style="{StaticResource RegisterButton}" Click="Button_Click"/>
+    </Grid>
+</Window>

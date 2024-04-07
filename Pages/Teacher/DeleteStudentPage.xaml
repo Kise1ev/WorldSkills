@@ -1,0 +1,31 @@
+﻿<Page x:Class="WorldSkills.Pages.Teacher.DeleteStudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Страница удаления студента">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Выберите группу:" Margin="0 0 5 0" Style="{StaticResource TxbDefaultStyleHeader}"/>
+                <ComboBox x:Name="GroupCmb" Style="{StaticResource ComboStyleDefault}" SelectionChanged="GroupCmb_SelectionChanged"/>
+            </StackPanel>
+
+            <Button x:Name="GoToBackBtn" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 -35 0 0" Content="НАЗАД" Style="{StaticResource LoginButton}" Click="GoToBackBtn_Click"/>
+
+            <DataGrid x:Name="DeleteStudentGrid" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto" Margin="0 10 0 0" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Width="*" Header="Имя студента"/>
+                    <DataGridTextColumn Binding="{Binding GroupName.Name}" Width="*" Header="Название группы"/>
+                    <DataGridTextColumn Binding="{Binding Special.Name}" Width="*" Header="Специальность"/>
+                    <DataGridTextColumn Binding="{Binding FormTime.Name}" Width="*" Header="Форма обучения"/>
+                    <DataGridTextColumn Binding="{Binding YearAdd.Year}" Width="*" Header="Год поступления"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button x:Name="DeleteStudentBtn" VerticalAlignment="Bottom" Width="150" Margin="15" Content="УДАЛИТЬ" Style="{StaticResource RegisterButton}" Click="DeleteStudentBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<Page x:Class="WorldSkills.Pages.Teacher.AddStudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Форма добавления студента">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите ФИО:" Width="150"/>
+                <TextBox x:Name="NameTxb" Style="{StaticResource TxtStyleDefault}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Text="Специальность:" Width="150"/>
+                <ComboBox x:Name="SpecialCmb" Style="{StaticResource ComboStyleDefault}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Text="Год поступления:" Width="150"/>
+                <ComboBox x:Name="YearAddCmb" Style="{StaticResource ComboStyleDefault}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Text="Форма обучения:" Width="150"/>
+                <ComboBox x:Name="FormTimeCmb" Style="{StaticResource ComboStyleDefault}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Text="Название группы:" Width="150"/>
+                <ComboBox x:Name="GroupNameCmb" Style="{StaticResource ComboStyleDefault}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="AddStudentBtn" Content="ПОДТВЕРДИТЬ" Margin="0 10 0 0" Style="{StaticResource LoginButton}" Click="AddStudentBtn_Click"/>
+                <Button x:Name="GoToBackBtn" Content="НАЗАД" Margin="10 10 0 0" Style="{StaticResource RegisterButton}" Click="GoToBackBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

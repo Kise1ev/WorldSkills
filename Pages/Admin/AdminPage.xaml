@@ -1,0 +1,21 @@
+﻿<Page x:Class="WorldSkills.Pages.Admin.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Окно администратора">
+    <Grid>
+        <StackPanel Margin="10">
+            <DataGrid x:Name="GridEvent" IsReadOnly="True" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding PersonalInfo}" Width="*" Header="Преподаватель"/>
+                    <DataGridTextColumn Binding="{Binding Student.Name}" Width="*" Header="Студент"/>
+                    <DataGridTextColumn Binding="{Binding Status.Name}" Width="*" Header="Статус"/>
+                    <DataGridTextColumn Binding="{Binding DateEvent}" Width="*" Header="Дата и время"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

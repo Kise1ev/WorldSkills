@@ -1,0 +1,34 @@
+﻿<Page x:Class="WorldSkills.Pages.Teacher.StudentListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Список студентов">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Выберите группу:" VerticalAlignment="Center"/>
+                <ComboBox x:Name="GroupCmb" Margin="5 0 0 0" Style="{StaticResource ComboStyleDefault}" SelectionChanged="GroupCmb_SelectionChanged"/>
+                <Button x:Name="GoToBackBtn" Margin="10 0 0 0" Content="НАЗАД" Style="{StaticResource LoginButton}" Click="GoToBackBtn_Click"/>
+            </StackPanel>
+
+            <DataGrid x:Name="StudentList" Margin="0 10 0 0" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Width="*" Header="ФИО студента"/>
+                    <DataGridTextColumn Binding="{Binding GroupName.Name}" Width="*" Header="Имя группы"/>
+                    <DataGridTextColumn Binding="{Binding FormTime.Name}" Width="*" Header="Форма обучения"/>
+
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="SelectStudentBtn" Content="ОТКРЫТЬ" Style="{StaticResource RegisterButton}" Click="SelectStudentBtn_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

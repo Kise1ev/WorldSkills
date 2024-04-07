@@ -1,0 +1,34 @@
+﻿<Page x:Class="WorldSkills.Pages.Student.StudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Окно пользователя">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Имя пользователя:" FontWeight="Bold"/>
+                <TextBlock x:Name="StudentNameTxt" VerticalAlignment="Center" Margin="5 0 0 0" Text="Тут будет имя"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Text="Логин:" FontWeight="Bold"/>
+                <TextBlock x:Name="LoginUserTxt" VerticalAlignment="Center" Margin="5 0 0 0" Text="Тут будет логин"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <TextBlock Text="Дата регистрации:" FontWeight="Bold"/>
+                <TextBlock x:Name="DateEventTxt" VerticalAlignment="Center" Text="Дата" Margin="5 0 0 0"/>
+            </StackPanel>
+
+            <DataGrid x:Name="ListGridView" AutoGenerateColumns="False" Margin="0 10 0 0" IsReadOnly="True" VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Binding="{Binding Name}" Header="Имя"/>
+                    <DataGridTextColumn Width="*" Binding="{Binding DateIn}" Header="Дата регистрации"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

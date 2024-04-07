@@ -1,0 +1,25 @@
+﻿<Page x:Class="WorldSkills.Pages.Teacher.EditStudentGradePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="EditStudentGradePage">
+    <Grid>
+        <StackPanel Margin="10">
+            <Button x:Name="GoToBackBtn" HorizontalAlignment="Right" VerticalAlignment="Top" Content="НАЗАД" Style="{StaticResource LoginButton}" Click="GoToBackBtn_Click"/>
+
+            <TextBlock x:Name="StudentNameTxb" Text="Тут будет имя студента" HorizontalAlignment="Left" Width="550" Style="{StaticResource TxbDefaultStyleHeader}"/>
+
+            <DataGrid x:Name="GradeList" AutoGenerateColumns="False" CanUserAddRows="False" VerticalScrollBarVisibility="Auto" Height="200">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Discipline.Name}" Width="*" Header="Предмет"/>
+                    <DataGridTextColumn Binding="{Binding Evaluation}" Width="*" Header="Оценка"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button x:Name="EditGradeBtn" VerticalAlignment="Bottom" Width="150" Margin="15" Content="ИЗМЕНИТЬ" Style="{StaticResource RegisterButton}" Click="EditGradeBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,19 @@
+﻿<Page x:Class="WorldSkills.Pages.Teacher.TeacherPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Окно администратора">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="AddStudentBtn" Content="Добавить студента" Style="{StaticResource AdminControlButton}" Click="AddStudentBtn_Click"/>
+            <Button x:Name="AddEvaluationBtn" Content="Добавить оценку" Style="{StaticResource AdminControlButton}" Click="AddEvaluationBtn_Click"/>
+            <Button x:Name="StudentListBtn" Content="Список студентов" Style="{StaticResource AdminControlButton}" Click="StudentListBtn_Click"/>
+            <Button x:Name="EditEvaluationBtn" Content="Редактирование оценки" Style="{StaticResource AdminControlButton}" Click="EditEvaluationBtn_Click"/>
+            <Button x:Name="DeleteStudentBtn" Content="Удалить студента" Style="{StaticResource AdminControlButton}" Click="DeleteStudentBtn_Click"/>
+            <Button x:Name="MVCBtn" Content="MVC" Style="{StaticResource AdminControlButton}" Click="MVCBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

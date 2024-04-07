@@ -1,0 +1,31 @@
+﻿<Page x:Class="WorldSkills.Pages.Teacher.EditEvaluationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="800"
+      Title="Выберите студента">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Название группы:" Margin="0 0 5 0" Style="{StaticResource TxbDefaultStyleHeader}"/>
+                <ComboBox x:Name="GroupNameCmb" Style="{StaticResource ComboStyleDefault}" SelectionChanged="GroupNameCmb_SelectionChanged"/>
+            </StackPanel>
+
+            <DataGrid x:Name="StudentList" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Margin="0 10 0 0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Width="*" Header="ФИО студента"/>
+                    
+                    <DataGridTemplateColumn Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="EditEvaluationBtn" Content="РЕДАКТИРОВАТЬ" Click="EditEvaluationBtn_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dea64fb9a41a4d66b4fdd46f2350c896" Name="Diagram1">
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Discipline" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.FormTime" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.GroupName" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.History" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Journal" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Role" Width="1.5" PointX="3.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Special" Width="1.5" PointX="3.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Status" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Student" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.Teacher" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.User" Width="1.5" PointX="6" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldSkillsAcademyModel.YearAdd" Width="1.5" PointX="3.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Journal_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Teacher_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Student_FormTime" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Journal_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Student_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_History_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_History_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_History_User" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Journal_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Student_Special" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldSkillsAcademyModel.FK_Student_YearAdd" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
